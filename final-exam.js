@@ -1,23 +1,19 @@
-function calculateincentive() {
-    var name =document.getElementById("nameField").value;
-    var age =document.getElementById("age").value;
-    var bill =document.getElementById("Monthly Internet Bill").value;
-    var device  =document.getElementById("device fees").value; 
-    let name = "ABC Khan";
-    let age = "65";
-    let yearlyFees= "15000";
-    let discount = "20%";
+function start() {
+  let name = document.getElementById("name").value;
+  let age = document.getElementById("age").value;
+  let internetbill = document.getElementById("internet bill").value;
+  let deviceMfees = document.getElementById("deviceMfees").value;
+  let internetbillYearly = internetbill * 12;
+  let monthllydeviceFees = deviceMfees / 12;
+  let totalyearlyFees = internetbillYearly + deviceMfees;
+  let incentiveamount;
+  if (age > 50 && totalyearlyFees > 2000) {
+    incentiveamount = 0.2 * internetbillYearly;
+  } else if (age > 30 && monthllydeviceFees >= 250) {
+    incentiveamount = 0.5 * internetbillYearly;
+  }
 
+  let hi = ` half ${name} your incentive amount is ${incentiveamount}` ;
 
-    if(a.value > 50 && y.value> 20000){
-        incentiveAmount.innerText =  "Incentive amount "+ ((y.value * 20) / 100.00) * 12;
-        return
-      }else if(a.value > 30 && (y.value / 12) > 250){
-        incentiveAmount.innerText =  "Incentive amount "+ ((y.value * 15) / 100.00) * 12;
-        return
-      }
-      incentiveAmount.innerText = "No incentive"
-    
-
-
+  document.getElementById("hi").innerHTML = hi;
 }
