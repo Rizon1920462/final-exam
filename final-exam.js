@@ -13,7 +13,7 @@ function start() {
     incentiveamount = 0.5 * internetbillYearly;
   }
 
-  let hi = ` half ${name} your incentive amount is ${incentiveamount}` ;
+  let hi = ` Congrates ${name} your incentive amount is ${incentiveamount}` ;
 
   document.getElementById("hi").innerHTML = hi;
 }
